@@ -13,7 +13,6 @@ public class ContainerSingletonTest {
     public static void main(String[] args) {
         Object obj = ContainerSingleton.getBean("com.princeli.pattern.singleton.test.Pojo");
 
-
         System.out.println(obj);
 
 

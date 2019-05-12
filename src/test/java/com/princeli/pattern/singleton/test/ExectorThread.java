@@ -1,6 +1,6 @@
 package com.princeli.pattern.singleton.test;
 
-import com.princeli.pattern.singleton.lazy.LazyDoubleCheckSingleton;
+import com.princeli.pattern.singleton.threadlocal.ThreadLocalSingleton;
 
 /**
  * @author : princeli
@@ -14,8 +14,16 @@ public class ExectorThread implements Runnable{
     @Override
     public void run() {
         //LazySimpleSingleton singleton = LazySimpleSingleton.getInstance();
-        LazyDoubleCheckSingleton singleton = LazyDoubleCheckSingleton.getInstance();
+        //LazyDoubleCheckSingleton singleton = LazyDoubleCheckSingleton.getInstance();
+        //ThreadLocalSingleton singleton = ThreadLocalSingleton.getInstance();
 
-        System.out.println(Thread.currentThread().getName() + ":" + singleton);
+        //System.out.println(Thread.currentThread().getName() + ":" + singleton);
+
+        System.out.println(Thread.currentThread().getName() + ":" + ThreadLocalSingleton.getInstance());
+        System.out.println(Thread.currentThread().getName() + ":" + ThreadLocalSingleton.getInstance());
+        System.out.println(Thread.currentThread().getName() + ":" + ThreadLocalSingleton.getInstance());
+
+
+
     }
 }
